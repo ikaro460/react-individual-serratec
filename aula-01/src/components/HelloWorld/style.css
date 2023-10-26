@@ -1,0 +1,10 @@
+h1 {
+  color: blue;
+  transition: 0.1s;
+  width: 50%;
+  cursor: pointer;
+}
+
+h1:hover {
+  scale: 1.1;
+}
