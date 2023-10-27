@@ -1,0 +1,27 @@
+.gatos {
+  margin: 20px;
+}
+
+.gato-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.gato-box {
+  width: 150px;
+  height: 150px;
+  margin: 5px;
+}
+
+.gato-box img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 3px;
+  box-shadow: 2px 2px 5px 2px #000000;
+}
+
+.gato-box img:hover {
+  transform: scale(1.05);
+}

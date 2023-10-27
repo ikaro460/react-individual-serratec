@@ -1,0 +1,40 @@
+:root {
+  /* Primary Colors */
+  --primary-bg: #3498db; /* Primary background color */
+  --primary-text: #ffffff; /* Primary text color */
+  --primary-btn: #27ae60; /* Primary button color */
+
+  /* Secondary Colors */
+  --secondary-bg: #f2f2f2; /* Secondary background color */
+  --secondary-text: #333333; /* Secondary text color */
+  --secondary-btn: #e74c3c; /* Secondary button color */
+
+  /* Accent Colors */
+  --accent-color-1: #f39c12;
+  --accent-color-2: #9b59b6;
+  --accent-color-3: #e74c3c;
+}
+
+body {
+  background-color: var(--primary-bg);
+  height: 100vh;
+}
+
+.App {
+  color: var(--primary-text);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+.bios {
+  margin-top: 70px;
+  height: 100vh;
+}

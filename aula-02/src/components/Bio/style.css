@@ -1,0 +1,16 @@
+.bio {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.bio-title {
+  cursor: pointer;
+  transition: 1s;
+  width: 50px;
+}
+
+.bio-title:hover {
+  transform: scale(1.1);
+}
