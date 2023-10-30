@@ -27,13 +27,17 @@ export default function Gatinhos() {
     },
   ];
 
-  const [gato, setGato] = useState();
+  const [gato, setGato] = useState(gatinhos[0]);
 
   function sortear(aux) {
-    if (aux == "proximo") {
-      setGato(gatinhos[gato.idNum + 1]);
-    } else if (aux == "anterior") {
-      setGato(gatinhos[gato.idNum - 1]);
+    if (aux === "proximo") {
+      if (gato.idNum < gatinhos.length - 1) {
+        setGato(gatinhos[gato.idNum + 1]);
+      }
+    } else if (aux === "anterior") {
+      if (gato.idNum > 0) {
+        setGato(gatinhos[gato.idNum - 1]);
+      }
     }
   }
 
@@ -41,20 +45,17 @@ export default function Gatinhos() {
     <div className="gatos">
       <h2>Gatinhos API</h2>
       <div className="gato-container">
-        {/*<div className="gato-sort">
-        <img src={gato.url} alt="gatinho" />
-        <Botao onClick={sortear("proximo")} title="Proximo" />
-        <Botao onClick={sortear("anterior")} title="Anterior" />
-    </div>*/}
+        <div className="gato-sort">
+          <img src={gato.url} alt="gatinho" />
+          <button onClick={() => sortear("anterior")}>Anterior</button>
+          <button onClick={() => sortear("proximo")}>Próximo</button>
+        </div>
 
-        {gatinhos.map((item, index) => {
-          console.log(item);
-          return (
-            <div className="gato-box">
-              <img src={item.url} alt={"gatinho " + (index + 1)} />
-            </div>
-          );
-        })}
+        {gatinhos.map((item, index) => (
+          <div className="gato-box" key={item.idNum}>
+            <img src={item.url} alt={"gatinho " + (index + 1)} />
+          </div>
+        ))}
       </div>
     </div>
   );
